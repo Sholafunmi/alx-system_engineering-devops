@@ -1,0 +1,3 @@
+#!/bin/bash
+echo -e "(\u00D4\u25E1\u203F\u25E1')\n"
+
