@@ -1,0 +1,2 @@
+#!/vin/bash
+echo $((2#%BINARY))
