@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "ABC" | tr 'Ac' 'Ze'
+echo "ABC" | sed 's/A/Z/g; s/c/e/g'
+
 
