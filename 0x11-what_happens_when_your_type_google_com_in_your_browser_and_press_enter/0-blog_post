@@ -1,0 +1,32 @@
+When you type “https://www.google.com" in your browser and press Enter, a complex series of events happens almost instantaneously to bring up Google’s homepage. Let’s break down the key steps involved in this process:
+
+1. DNS Request
+The first step is resolving the human-readable address “www.google.com" into an IP address that computers use to identify each other on the network. This is done through a DNS (Domain Name System) lookup. Your browser checks its cache to see if it has recently looked up this address. If not, it queries a DNS server, which returns the IP address for Google’s servers.
+
+2. TCP/IP Connection
+Once the IP address is known, your browser initiates a TCP (Transmission Control Protocol) connection to the Google server. This involves a three-way handshake:
+
+SYN: Your browser sends a SYN (synchronize) packet to the server to request a connection.
+SYN-ACK: The server responds with a SYN-ACK (synchronize-acknowledge) packet.
+ACK: Your browser sends an ACK (acknowledge) packet back to the server, establishing the connection.
+3. Firewall
+During this connection process, the packets of data may pass through one or more firewalls. Firewalls are security systems that monitor and control incoming and outgoing network traffic based on predetermined security rules. They help protect the network by filtering out potentially harmful traffic.
+
+4. HTTPS/SSL
+Because you typed “https,” the connection to Google uses HTTPS (Hypertext Transfer Protocol Secure). This means that the communication between your browser and Google’s server is encrypted using SSL/TLS (Secure Sockets Layer/Transport Layer Security). This ensures that any data exchanged is secure and private.
+
+5. Load Balancer
+Once the connection is established, your request reaches Google’s load balancer. A load balancer distributes incoming network traffic across multiple servers to ensure no single server is overwhelmed, improving the responsiveness and availability of the service.
+
+6. Web Server
+The load balancer forwards your request to one of Google’s web servers. A web server is responsible for handling HTTP requests from clients (like your browser), serving static content (like HTML, CSS, and JavaScript files), and forwarding requests for dynamic content to the appropriate application servers.
+
+7. Application Server
+For dynamic content, the web server passes your request to an application server. This server runs Google’s application logic, processing your search query, and interacting with other services as needed to generate a response.
+
+8. Database
+If your request requires data stored in a database (e.g., user settings, past searches, etc.), the application server will query the database. Google’s database systems are highly optimized and distributed, designed to handle vast amounts of data and provide quick responses.
+
+Finally, the application server processes all necessary information and sends the data back through the chain: to the web server, then through the load balancer, and back to your browser via the established TCP connection. Your browser receives the response, processes the HTML, CSS, and JavaScript, and renders the Google homepage on your screen.
+
+In just a fraction of a second, all these steps ensure you can access Google and perform your search smoothly and securely.
